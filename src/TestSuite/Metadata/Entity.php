@@ -10,6 +10,7 @@ use SimpleSAML\Module\monitor\TestConfiguration;
 use SimpleSAML\Module\monitor\TestData;
 use SimpleSAML\Module\monitor\TestResult;
 use SimpleSAML\Utils;
+use SimpleSAML\Logger;
 
 use function array_filter;
 use function array_key_exists;
@@ -54,6 +55,8 @@ final class Entity extends \SimpleSAML\Module\monitor\TestSuiteFactory
      */
     public function invokeTest(): void
     {
+        \SimpleSAML\Logger::warning("test metadata entity " . $this->entityId . ": " . var_export($this->entityMetadata, true));
+
         $input = [
             'entityId' => $this->entityId,
             'entityMetadata' => $this->entityMetadata,
