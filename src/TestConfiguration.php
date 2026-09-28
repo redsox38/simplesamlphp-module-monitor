@@ -125,7 +125,7 @@ final class TestConfiguration
             foreach ($monitorMetadata as $set => $entityIds) {
                 $metadata[$set] = [];
                 foreach ($entityIds as $entityId) {
-                    $md = $handler->getMetaDataConfig($entityId, $set);
+                    $md = $handler->getMetaData($entityId, $set);
                     $metadata[$set][$entityId] = $md;
                 }
             }
