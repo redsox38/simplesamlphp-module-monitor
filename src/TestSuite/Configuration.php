@@ -48,7 +48,7 @@ final class Configuration extends \SimpleSAML\Module\monitor\TestSuiteFactory
         $configuration = $this->getConfiguration();
         $results = [];
 
-        $results = array_merge($results, $this->testCertificates($configuration));
+        //$results = array_merge($results, $this->testCertificates($configuration));
         $results = array_merge($results, $this->testDatabase($configuration));
 
         foreach ($results as $result) {

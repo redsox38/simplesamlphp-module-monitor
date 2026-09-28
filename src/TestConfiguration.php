@@ -126,7 +126,7 @@ final class TestConfiguration
                 $metadata[$set] = [];
                 foreach ($entityIds as $entityId) {
                     $md = $handler->getMetaDataConfig($entityId, $set);
-                    $metadata[$set][] = $md;
+                    $metadata[$set][$entityId] = $md;
                 }
             }
         }
@@ -279,6 +279,6 @@ final class TestConfiguration
      */
     public function getMetadataConfig(): array
     {
-        return $this->metadataConfig;        
+        return $this->metadataConfig;  
     }
 }
